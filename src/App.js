@@ -6,8 +6,8 @@ class FormField extends Component {
   render() {
     return (
       <div className="formField" id="nameForm">
-        <form action ={this.props.action}>
-          {this.props.label}<input type="text"/><br/><br/>
+        <form action="https://data.austintexas.gov/resource/nguv-n54k.json" method="GET">
+          {this.props.label}<input type="text" name="restaurant_name" /><br/><br/>
           <input type="submit"/>
         </form>
       </div>
@@ -20,9 +20,9 @@ class App extends Component {
     return (
       <div className="App">
         <h1>
-          Does Austin have your unclaimed property?
+          Search restaurant inspection scores in city of Austin
         </h1>
-        <FormField action="#" label="Enter your name: " />
+        <FormField label="Enter a restaurant name: " />
       </div>
     );
   }
